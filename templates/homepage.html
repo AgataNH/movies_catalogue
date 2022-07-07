@@ -4,17 +4,18 @@
 
 <div class="row">
    <div class="col-lg-12 text-center">
-       <h1 class="mt-5">Witaj w mojej bibliotece filmów</h1>
-       <p class="lead">Znajdziesz tutaj tylko najlepsze tytuły!</p>
+       <h1 class="mt-5 text-success">Witaj w mojej bibliotece filmów</h1>
+       <p class="lead text-danger">Znajdziesz tutaj tylko najlepsze tytuły!</p>
    </div>
    {% for movie in movies %}
    <div class="col-lg-3 col-md-6 mb-4">
        <div class="card h-100">
-           <img class="card-img-top" src="http://placehold.it/300x500" alt="">
-           <div class="card-body">
+           <img class="card-img-top border border-danger" src="https://as1.ftcdn.net/v2/jpg/05/04/65/94/1000_F_504659462_qk513OEHqop6KIJFAif9Rv4NP4qUfBDq.jpg" alt="">
+           <div class="card-body border border-warning">
                <h4 class="card-title">Tytuł filmu</h4>
+               <p class="card-text text-right">Ciekawy opis filmu, ciekawy opis filmu, ciekawy...</p>
            </div>
-           <div class="card-footer text-center">
+           <div class="card-footer text-center border border-info">
                <a href="#" class="btn btn-primary">Pokaż więcej</a>
            </div>
        </div>
