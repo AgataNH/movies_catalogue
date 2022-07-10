@@ -7,7 +7,7 @@ list_type = ["now_playing", "upcoming", "top_rated", "popular"]
 
 @app.route('/')
 def homepage():
-    selected_list = request.args.get('list_type', "popular")
+    selected_list = request.args.get('list_type')
 
     if selected_list not in list_type:
         selected_list = "popular"
