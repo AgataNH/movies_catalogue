@@ -4,7 +4,7 @@
 <div class="container">
    
    <h1 class="my-4">
-       {% for movie in movies %}{{ movie.title }}{% endfor %}
+       {{ movie["title"] }}
    </h1>
 
 
@@ -13,15 +13,15 @@
        <img class="img-fluid" src="{{ tmdb_image_url(movie.backdrop_path, "w780") }}" alt="">
      </div>
      <div class="col-md-4">
-         <h3>{% for movie in movies %}{{ movie.tagline }}{% endfor %}</h3>
+         <h3>{{ movie["tagline"] }}</h3>
        <p>
-        {% for movie in movies %}{{ movie.overview }}{% endfor %}
+        {{ movie["overview"] }}
        </p>
        <dl>
            <dt>Budget</dt>
-           <dd>{% for movie in movies %}{{ movie.budget }}{% endfor %}</dd>
+           <dd>{{ movie["budget"] }}</dd>
            <dt>Genre</dt>
-           <dd>{% for movie in movies %}{% for genre in movie.genres %}{{ genre.name }}, {% endfor %}{% endfor %}</dd>
+           <dd>{% for genre in movie["genres"] %}{{ genre.name }}, {% endfor %}</dd>
          </dl>
      </div>
    </div>

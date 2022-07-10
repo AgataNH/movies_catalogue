@@ -16,8 +16,9 @@ def utility_processor():
 
 @app.route("/movie/<movie_id>")
 def movie_details(movie_id):
-    details = tmdb_client.get_single_movie(movie_id)
-    return render_template("movie_details.html", movie=details)
+   details = tmdb_client.get_single_movie(movie_id)
+   cast = tmdb_client.get_single_movie_cast(movie_id)
+   return render_template("movie_details.html", movie=details, cast=cast)
 
 if __name__ == '__main__':
     app.run(debug=True)
