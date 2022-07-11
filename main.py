@@ -13,7 +13,7 @@ def homepage():
         selected_list = "popular"
 
     movies = tmdb_client.get_movies(how_many=8, list_type=selected_list)
-    return render_template("homepage.html", movies=movies, current_list=selected_list)
+    return render_template("homepage.html", movies=movies, current_list=selected_list, list_type=list_type)
 
 @app.context_processor
 def utility_processor():
