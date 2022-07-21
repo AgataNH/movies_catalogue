@@ -22,6 +22,6 @@ def test_list_type(monkeypatch, list_type):
     monkeypatch.setattr("tmdb_client.call_tmdb_api", api_mock)
 
     with app.test_client() as client:
-       response = client.get('/?list_type={list_type}')
+       response = client.get(f'/?list_type={list_type}')
        assert response.status_code == 200
        api_mock.assert_called_once_with(f'movie/{list_type}?api_key=c2c05e38fdd57b4ae0276dfa0bd8d60c')
